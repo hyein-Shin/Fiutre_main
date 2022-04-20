@@ -1,0 +1,1576 @@
+*{margin: 0; padding: 0;}
+@font-face {
+    font-family: 'LeferiBaseType-BoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-BoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiPoint-BlackObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiPoint-WhiteA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiPoint-SpecialItalicA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: "LeferiPoint-WhiteA";
+    font-size: 16px;
+    line-height: 24px;
+    color: #202023;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #202023;
+}
+
+/*header*/
+header{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #202023;
+    box-sizing: border-box;
+}
+.brand_logo{
+    width: 60%;
+    height: 100%;
+    flex-shrink: 60%;    
+    border-right: 1px solid #202023;
+    box-sizing: border-box;
+    background-color: #7a8262;
+    display: flex;
+    align-items: center;
+}
+.brand_logo a{
+    display: block;
+    font-family: "LeferiPoint-BlackA";
+    font-size: 40px;    
+    padding: 10px 0 0 60px;
+}
+.brand_logo a:hover{
+    font-family: "LeferiPoint-BlackObliqueA";
+}
+.search{
+    width: 30%;
+    height: 100%;
+    flex-shrink: 30%;
+    border-right: 1px solid #202023;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search input{
+    border: 0;
+    height: 40px;    
+    outline: 0;
+}
+.search input::placeholder{
+    font-family: "LeferiPoint-BlackObliqueA";
+    color: #202023;
+    font-size: 18px;
+    border-bottom: 1px solid #202023;
+}
+.join_cart{
+    width: 10%;
+    height: 100%;
+    flex-shrink: 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+.join_cart a:hover{
+    color: #7a8262;
+}
+/*nav*/
+nav{
+    box-sizing: border-box;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-shrink: 100%;
+    border-bottom: 1px solid #202023;    
+}
+.navbar{
+    box-sizing: border-box;
+    width: 90%;
+    height: 100%;
+    display: flex;  
+    flex-shrink: 90%;      
+    border-right: 1px solid #202023;   
+    align-items: center; 
+}
+.navbar_why{
+    font-family: "LeferiPoint-BlackA";
+    font-size: 20px;    
+    padding-left: 60px;
+    width: 20%;
+    height: 100%;
+    flex-shrink: 20%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.navbar_why a:hover{
+    color: #7a8262;    
+}
+.navbar_menu{
+    width: 80%;
+    flex-shrink: 80%;    
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;    
+}
+.navbar_menu li{
+    position: relative;
+    width: 15%;    
+    text-align: center;
+}
+.navbar_menu> li> a{
+    font-family: "LeferiPoint-BlackA";    
+    display: block;        
+}
+.navbar_menu> li> a:hover{
+    color: #7a8262;    
+}
+.sub{
+    position: absolute;
+    width: 100%;
+    display: none;
+    z-index: 99;
+    margin-top: 18px;
+    border: 1px solid #202023;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: white;
+}
+.sub li{
+    width: 100%;    
+    border-bottom: 1px solid #202023;
+}
+.sub a{  
+    font-family: "LeferiBaseType-RegularA";
+    display: block; 
+    padding: 10px 0;   
+    text-align: center;      
+}
+.sub a:hover{
+    background-color: #f2c5bb;  
+}
+.empty_beige{
+    box-sizing: border-box;
+    width: 10%;
+    height: 100%;    
+    display: flex;
+         
+}
+.navbar_toggleBtn{
+    display: none;
+    position: absolute;
+    right: 30px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/*main*/
+main{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-shrink: 100%;
+    border-bottom: 1px solid #202023;    
+    box-sizing: border-box;
+}
+.empty_pink{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 10%;
+    box-sizing: border-box;     
+    position: relative;
+    background-color: #f2dac4;
+}
+.main_img{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 45%;
+    box-sizing: border-box;
+    border-right: 1px solid #202023;    
+}
+.main_text{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 45%;
+    box-sizing: border-box;   
+    flex-direction: column;   
+    border-right: 1px solid #202023;
+}
+.main_text .slide{
+    height: 90%;
+}
+.button{
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+    border-top: 1px solid #202023;
+    display: flex;    
+}
+.button_left{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid #202023;
+    position: relative;
+}
+.button_right{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;      
+    position: relative;
+}
+.button_left:hover{
+    background-color: #7f745b;
+}
+.button_right:hover{
+    background-color: #7f745b;
+}
+.slide_wrapper{
+    flex-shrink: 45%;
+    width: 45%;
+    height: 100%;     
+}
+.slide{ 
+    width:100%; 
+    height:100%;
+}
+.empty_pink h1{
+    font-family: "LeferiBaseType-RegularA";
+    letter-spacing: 4px;
+    word-spacing: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(90deg) translate(-50%, 0%);
+    transform-origin: left top;
+    white-space: nowrap;
+    font-size: 36px;
+}
+.main_bg{ 
+    display: flex;
+    flex-direction: column;  
+  }
+.slide .swiper-slide {
+    text-align: center;   
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+.slide  .swiper-slide img{    
+    display: block;    
+    width: 100%;    
+  }
+/*이동버튼 영역*/
+.button .swiper-button-next:after,
+.button .swiper-button-prev:after{
+    display:none;
+  }
+/* 소스에 들어있는 버튼 삭제 */
+.button .swiper-button-next,
+.button .swiper-button-prev{
+    width:100px; 
+    height:40px;
+  }
+/* 버튼 크기 */
+.button .swiper-button-prev{  
+    bottom: 0;
+    left: 30px;
+    background:url(../images/prev.png);
+  }
+/* 버튼 위치, 버튼 이미지 */
+.button .swiper-button-next{ 
+    bottom: 0;  
+    right:30px; 
+    background:url(../images/next.png);
+  }
+/* 버튼 위치, 버튼 이미지 */
+.button:hover .swiper-button-prev{
+    background:url(../images/prev_hover.png);
+  }/* 버튼 호버 이미지 */
+.button:hover .swiper-button-next{
+    background:url(../images/next_hover.png);
+  }
+/* 버튼 호버 이미지 */
+ /*블릿버튼 영역*/
+.slide .swiper-pagination-bullet{
+    background: #7f745b; 
+    width:10px; 
+    height:10px; 
+    opacity:0.5;}
+/* 블릿버튼 크기, 색상, 투명도 */
+.slide .swiper-pagination-bullet-active{
+    opacity:1;
+  }
+ /* 블릿버튼 페이지 표시날 때 투명도 */
+.slide .swiper-pagination-fraction, 
+.slide .swiper-pagination-custom, 
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom:10px;
+  }/* 블릿버튼 위치 */ 
+.main_text01{   
+    flex-direction: column;
+    text-align: left;
+}
+.main_text h6{
+    font-family: "LeferiPoint-BlackObliqueA";
+    font-size: 16px;
+    border-bottom: 1px solid #202023;
+    margin-bottom: 52px;
+}
+.main_text01 h1{
+    text-align: start;
+    font-family: "LeferiBaseType-RegularA";
+    font-size: 54px;
+    margin-bottom: 28px;
+}
+.main_text01 h2{
+    font-size: 24px;
+    font-family: "LeferiBaseType-RegularA";
+    margin-bottom: 52px;
+}
+.main_text01 h3{
+    font-size: 18px;
+    font-family: "LeferiPoint-WhiteA";
+    margin-bottom: 12px;
+}
+.main_text01 h3 a{
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 8px 4px 8px;
+    border: 1px solid #202023;
+}
+.main_text01 h3 a:hover{
+    background-color: #f2c5bb;        
+}
+/*tab*/
+.tab{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-shrink: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+    align-items: center;
+    padding: 0px 60px;
+    justify-content: space-between;
+}
+.tabnav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.promotion{
+    font-family: "LeferiPoint-BlackA";
+    font-size: 20px;
+}
+.tabnav li a{
+    font-family: "LeferiBaseType-RegularA";
+}
+.tabnav li a:hover{
+    color: #7a8262;
+}
+.tabcontent{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-shrink: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+}
+#tab01{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#tab02{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#tab03{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#tab04{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#tab05{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.tab_item{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.tab_item li{
+    width: 25%;
+    height: 100%;       
+    border-right: 1px solid #202023;
+    box-sizing: border-box;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    padding-top: 40px; 
+}
+.tab_item li img{   
+    width: 240px;  
+}
+.tab_item li h5{
+    font-family: "LeferiBaseType-RegularA";
+    font-size: 16px;    
+    margin-bottom: 6px;
+}
+.tab_item li h6{
+    font-size: 14px;
+    font-family: "LeferiPoint-WhiteA";    
+}
+.tab_item li:hover{
+    background-color: #f2dac4;
+}
+.tab_item li:nth-child(4){
+    border-right: 0;
+}
+/*new_arrival*/
+#newarrival_bar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+    justify-content: space-between;
+    padding: 0 60px;
+    align-items: center;
+}
+#newarrival_bar h3{
+    font-family: "LeferiPoint-BlackA";
+    font-size: 20px;
+}
+#newarrival_bar h4{   
+    font-family: "LeferiBaseType-RegularA";
+    font-size: 14px;    
+}
+#newarrival_bar h4 a:hover{
+    color: #7a8262;
+}
+#newarrival_img{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+}
+.empty{
+    width: 10%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.new_img{
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 1px solid #202023;
+    border-right: 1px solid #202023;   
+    overflow: hidden;     
+}
+.new_text{
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;    
+    border-right: 1px solid #202023;
+}
+.new_top{
+    width: 100%;
+    height: 75%;           
+}
+.new_top h6{
+    font-size: 14px;
+    font-family: "LeferiBaseType-RegularA";   
+    padding: 80px 0 10px 80px;
+}
+.new_top h1{
+    font-size: 28px;
+    font-family: "LeferiPoint-BlackA";
+    line-height: 34px;
+    padding: 0 0 30px 80px;
+}
+.new_top h3{
+    font-size: 18px;
+    padding-left: 80px;
+    padding-bottom: 15px;
+}
+.new_top h4 a{
+    display: inline-block;
+    border: 1px solid #202023;
+    padding: 7px 10px 4px 10px;
+    margin-left: 80px;
+    font-size: 14px;
+}
+.new_top h4 a:hover{
+    background-color: #f2c5bb;
+}
+.thumb{
+    width: 100%;
+    height: 25%;
+    border-top: 1px solid #202023;
+    box-sizing: border-box;
+    display: flex;
+}
+.thumb li{
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border-right: 1px solid #202023;
+    cursor:pointer;
+    overflow: hidden;
+    text-align: center; 
+}
+.thumb li img{
+    height: 100%;    
+}
+.thumb .thumb_img.on{    
+    opacity: 0.4;
+}
+.thumb li:nth-child(4){
+    border-right: 0;
+}
+#display{
+    width: 100%;
+    height: 100%;
+}
+
+/*full_empty*/
+#full_empty{
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid #202023;
+    box-sizing: border-box;
+    display: flex;
+}
+.full_empty_1{
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 25%;
+    border-right: 1px solid #202023;
+}
+.full_empty_2{
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 25%;
+    border-right: 1px solid #202023;
+}
+.full_empty_3{
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 25%;
+    border-right: 1px solid #202023;
+}
+.full_empty_4{
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 25%;
+}
+
+/*magazine*/
+#magazine{
+    width: 100%;
+    height: 750px;
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 1px solid #202023;
+}
+#magazine h1{
+    font-size: 34px;
+    font-family: "LeferiPoint-BlackA";
+    margin: 60px 0 20px 40px;
+}
+#magazine h4{
+    font-size: 14px;
+    margin-left: 40px;
+}
+.magazine01{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 25%;
+    box-sizing: border-box;
+    border-right: 1px solid #202023;
+    background: url(../images/magazine1.jpg) no-repeat;  
+    background-size: cover;  
+}
+.magazine02{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 25%;
+    box-sizing: border-box;
+    border-right: 1px solid #202023;
+}
+.magazine02_01{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;   
+}
+.magazine02_01:hover{
+    background-color: #bacdd9;
+}
+.magazine02_02{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;
+    background: url(../images/magazine2.jpg) no-repeat;
+    background-size: cover;
+}
+.magazine03{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    flex-shrink: 25%;
+    box-sizing: border-box;
+    border-right: 1px solid #202023;
+}
+.magazine03_01{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;   
+    background: url(../images/magazine3.jpg) no-repeat;
+    background-size: cover; 
+}
+.magazine03_02{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;   
+}
+.magazine03_02:hover{
+    background-color: #7a8262;
+}
+.magazine03_03{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;
+    border-top: 1px solid #202023;    
+    flex-direction: column;   
+}
+.magazine03_03:hover{
+    background-color: #f2c5bb;
+}
+.magazine04{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 25%;
+    box-sizing: border-box;    
+}
+.magazine04_01{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;    
+    flex-direction: column;   
+}
+.magazine04_01:hover{
+    background-color: #f2dac4;
+}
+.magazine04_02{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;        
+}
+.magazine04_02:hover{
+    background-color: #7f745b;
+}
+.magazine04_03{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;      
+    border-top: 1px solid #202023;  
+}
+.magazine04_03:hover{
+    background-color: #f2c5bb;
+}
+
+/*best_review*/
+#best_review{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+}
+.review1{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 33%;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.review2{
+    width: 34%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 34%;
+    box-sizing: border-box;
+    border-left: 1px solid #202023;
+    border-right: 1px solid #202023;
+    flex-direction: column;
+}
+.review3{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 33%;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.review_title{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+    align-items: center;
+}
+.review_title h1{
+    padding-left: 60px;
+    font-family: "LeferiPoint-BlackA";
+    font-size: 40px;
+}
+.review_product{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;    
+    font-family: "LeferiPoint-WhiteA";
+    font-size: 12px;
+}
+.review_product span{
+    font-size: 18px;
+    font-family: "LeferiBaseType-RegularA";
+}
+.review_img{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+}
+.review_text{
+    width: 100%;
+    height: 32%;
+    display: flex;
+    box-sizing: border-box;
+}
+.reviewimg1{
+    background: url(../images/review1.jpg) no-repeat;
+    background-size: cover;
+}
+.reviewimg2{
+    background: url(../images/review2.jpg) no-repeat;
+    background-size: cover;
+}
+.reviewimg3{
+    background: url(../images/review3.jpg) no-repeat;
+    background-size: cover;
+}
+.best span{
+    color: #e89611;
+}
+.best{
+    padding: 40px 60px;
+    font-size: 14px;
+    font-family: "LeferiBaseType-RegularA";
+}
+
+
+    
+/*brand story*/
+#brand_story{
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #202023;
+    display: flex;
+    box-sizing: border-box;
+}
+.story_empty{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 10%;    
+}
+.story_logo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 30%;
+    border-left: 1px solid #202023;
+    flex-direction: column;
+}
+.story_logo h3{
+    font-size: 14px;  
+    line-height: 18px;
+    padding: 60px 0 16px 50px;
+}
+.story_logo h1{
+    font-size: 58px;  
+    font-family: "LeferiPoint-BlackA";
+    padding-left: 50px;
+    padding-top: 25px;
+    background: url(../images/logo.png) no-repeat 300px 0px;
+    height: 60px;
+    width: 350px;
+}
+.story_text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 60%;
+    border-left: 1px solid #202023;
+    border-right: 1px solid #202023;
+    flex-direction: column;
+}
+.story_text h3{
+    padding: 50px 0 0 50px;
+    line-height: 22px;    
+    font-size: 14px;
+}
+.story_text h1{
+    font-size: 24px;
+    padding-top: 16px;
+    padding-left: 50px;
+    font-family: "LeferiPoint-SpecialItalicA";
+}
+
+
+/*footer*/
+#sns{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+    padding: 0 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+.sns{
+    display: flex;
+    gap: 30px;
+}
+.sns li a:hover{
+    color: #7a8262;
+}
+.korea{
+    display: flex;
+    gap: 30px;
+}
+.korea li a{
+    font-family: "LeferiBaseType-RegularA";
+    font-size: 14px;   
+}
+.korea li a:hover{
+    color: #7a8262;
+}
+.fa-earth-americas{
+    padding-right: 10px;
+}
+.fa-angle-down{
+    padding-left: 10px; 
+}
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202023;
+}
+.footer1{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-shrink: 33%;
+    flex-direction: column;
+}
+.footer2{
+    width: 34%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-shrink: 34%;
+    border-left: 1px solid #202023;
+    border-right: 1px solid #202023;
+    flex-direction: column;
+}
+.footer3{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-shrink: 33%;
+    flex-direction: column;
+}
+.logo{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 30px 0 20px 80px;
+}
+.logo li{
+    font-size: 38px;
+    font-family: "LeferiPoint-BlackA";
+}
+.footer1_text{
+    font-size: 12px;
+    font-family: "LeferiBaseType-RegularA";
+    padding-left: 80px;    
+}
+.footer1_text li a:hover{
+    color: #7a8262;    
+}
+.footer2 p{
+    font-size: 16px;
+    font-family: "LeferiPoint-BlackA";
+    padding: 80px 0 20px 80px;
+}
+.contact{
+    font-size: 14px;
+    font-family:"LeferiBaseType-RegularA"; 
+    padding-left: 80px;
+}
+.footer3 p{
+    font-size: 16px;
+    font-family: "LeferiPoint-BlackA";
+    padding: 80px 0 20px 80px;
+}
+.footer3 p a:hover{
+    color: #7a8262;
+}
+.time{
+    font-size: 14px;
+    font-family:"LeferiBaseType-RegularA"; 
+    padding-left: 80px;
+}
+.phone{
+    display: none;
+}
+/*태블릿 사이즈*/
+@media screen and (max-width: 1024px){
+    header{
+        height: 40px;
+    }
+    .brand_logo{
+        width: 80%;
+        flex-shrink: 80%;
+    }
+    .brand_logo a{
+        font-size: 28px;
+    }
+    .search{
+        display: none;
+    }
+    .join_cart{
+        width: 20%;
+        flex-shrink: 20%;
+    } 
+    nav{
+        height: 40px;
+    }
+    .empty_beige{
+        display: none;
+    }
+    .navbar{
+        width: 100%;
+        border-right: 0;
+    }
+    .sub{
+        margin-top: 8px;
+    }
+    .empty_pink{
+        display: none;
+    }
+    main{
+        height: 500px;
+    }
+    .main_img{
+        width: 50%;
+        flex-shrink: 50%;
+    }
+    .main_text{
+        width: 50%;
+        flex-shrink: 50%;
+        border-right: 0;
+    }
+    .tabcontent{        
+        height: 800px;        
+    }    
+    .tab_item{        
+        flex-wrap: wrap;        
+    }
+    .tab_item li{
+        width: 50%;
+        height: 400px;                 
+    }    
+    .tab_item li:nth-child(1){
+        border-right: 1px solid #202023;
+        border-bottom: 1px solid #202023;
+    }
+    .tab_item li:nth-child(2){
+        border-right: 0;
+        border-bottom: 1px solid #202023;
+    }
+    .tab_item li:nth-child(3){
+        border-right: 1px solid #202023;
+    }
+    .tab{
+        height: 40px;
+    }
+    #newarrival_bar{
+        height: 40px;
+    }
+    #newarrival_img{        
+        height: 500px;     
+    }
+    .empty{
+        display: none;
+    }
+    .new_img{
+        width: 50%;        
+        border-left: 0;      
+    }
+    .new_text{
+        width: 50%;           
+        border-right: 0;
+    }
+    #full_empty{
+        display: none;
+    }
+    #magazine{
+        height: 500px;
+    }
+    .magazine02_01{
+        height: 100%;
+        border-bottom: 0;
+    }
+    .magazine02_02{
+        display: none;
+    }
+    .magazine03_01{
+        height: 50%;
+    }
+    .magazine03_02{
+        display: none;
+    }
+    .magazine03_03{
+        height: 50%;
+        border-top: 0;
+    }
+    .magazine04_01{
+        height: 50%;
+    }
+    .magazine04_02{
+        display: none;
+    }
+    .magazine04_03{
+        height: 50%;    
+        border-top: 0;    
+        background: url(../images/magazine2.jpg) no-repeat;
+        background-size: cover;
+    }
+    .main_text h6{
+        font-family: "LeferiPoint-BlackObliqueA";
+        font-size: 14px;
+        border-bottom: 1px solid #202023;
+        margin-bottom: 22px;
+    }
+    .main_text01 h1{
+        text-align: start;
+        font-family: "LeferiBaseType-RegularA";
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    .main_text01 h2{
+        font-size: 18px;
+        font-family: "LeferiBaseType-RegularA";
+        margin-bottom: 42px;
+    }
+    .main_text01 h3{
+        font-size: 16px;
+        font-family: "LeferiPoint-WhiteA";
+        margin-bottom: 12px;
+    }
+    .main_text01 h3 a{
+        display: inline-block;
+        font-size: 14px;
+        padding: 6px 8px 4px 8px;
+        border: 1px solid #202023;
+    }
+    .story_empty{
+        display: none;
+    }
+    .story_logo{
+        width: 50%;
+        border-left: 0;
+    }
+    .story_text{
+        width: 50%;
+        border-right: 0;
+    }
+    #sns{
+        height: 40px;
+    }
+    #brand_story{
+        height: 250px;
+    }
+    #best_review{
+        height: 700px;
+    }
+    .best{
+        padding: 20px 60px;
+    }
+    .logo li{
+        font-size: 24px;
+    }
+    .footer2 p {        
+        padding: 40px 40px 20px 40px;
+    }
+    .contact {   
+        padding-left: 40px;
+    }
+    .footer3 p {
+        padding: 40px 40px 20px 40px;
+    }
+    .time{
+        padding-left: 40px;
+    }
+}
+
+/*모바일 사이즈*/
+@media screen and (max-width: 768px){    
+      nav{
+        height: 100%;
+      }  
+      .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        border-right: 0px;        
+      }
+      .navbar_why{
+        padding: 12px 0 10px 60px; 
+        width: 100%;   
+      }
+      .navbar_menu{
+        height: 100%;
+        display: none;
+        flex-direction: column;                
+        width: 100%;
+        padding: 0;
+      } 
+      .navbar_menu> li{
+        width: 100%;   
+        border-top: 1px solid black;
+      }
+      .navbar_menu> li> a{
+        display: block;    
+        width: 100%;        
+        padding: 10px 0;    
+      } 
+      .navbar_menu> li:hover> a{
+        background-color: #7a8262;
+        color: black;
+      }       
+      .sub{
+        margin-top: 0;
+        position: static;        
+        border: 0;
+      }    
+      .sub li{
+          border-bottom: 0;
+          border-top: 1px solid #202023;
+      }     
+      .navbar_toggleBtn{
+        display: block;
+      } 
+      .navbar_menu.active{
+        display: flex;
+      }
+      main{
+          flex-direction: column;
+          height: 100%;
+      }
+      .main_text{
+        width: 100%;
+        order: 2;    
+        height: 400px;        
+      }
+      .main_img{
+        width: 100%;
+        order: 1;
+        height: 400px;
+        border-right: 0;
+        border-bottom: 1px solid #202023;
+        border-right: 0;
+      }
+     .promotion{
+          font-size: 16px;
+      }
+     .tabnav li a{
+          font-size: 14px;
+      }
+     .tabcontent{        
+        height: 100%;        
+    }    
+     .tab_item{        
+        flex-direction: column;     
+        flex-wrap: nowrap;   
+    }
+     .tab_item li{
+        width: 100%;
+        height: 400px;     
+        padding-top: 40px;            
+    }    
+     .tab_item li:nth-child(1){
+        border-right: 0;
+        border-bottom: 1px solid #202023;
+    }
+     .tab_item li:nth-child(2){
+        border-right: 0;
+        border-bottom: 1px solid #202023;
+    }
+     .tab_item li:nth-child(3){
+        border-right: 0;
+        border-bottom: 1px solid #202023
+    }
+    #newarrival_bar h3{
+        font-size: 16px;
+    }
+    #newarrival_img{        
+        height: 100%;
+        flex-direction: column;     
+    }   
+    .new_img{
+        width: 100%;  
+        height: 500px;
+        border-right: 0;
+        border-bottom: 1px solid #202023;              
+    }    
+    .new_text{
+        width: 100%;           
+        height: 500px;
+    }  
+    .new_top{        
+        height: 75%;    
+    }   
+    .new_top h6{
+        padding: 60px 0 10px 80px; ;
+    }
+    .thumb{        
+        height: 25%;        
+    }  
+    #magazine{
+        flex-wrap: wrap;
+        height: 100%;
+        border-bottom: 0;
+    }
+    .magazine01{
+        width: 50%;
+        height: 300px;
+        border-bottom: 1px solid #202023;
+    }
+    .magazine02{
+        width: 50%;
+        height: 300px;
+        border-right: 0;
+        border-bottom: 1px solid #202023;
+    }
+    .magazine02_01{
+        width: 100%;
+        height: 100%;
+    }
+    .magazine03{
+        width: 50%;
+        height: 600px;
+    }
+    .magazine03_01{
+        width: 100%;
+        height: 300px;
+        order: 2;        
+    }
+    .magazine03_03{
+        width: 100%;
+        height: 300px;
+        order: 1;
+        border-bottom: 1px solid #202023;        
+    }
+    .magazine04{
+        width: 50%;
+        height: 600px;
+    }
+    .magazine04_01{
+        width: 100%;
+        height: 300px;
+        order: 2;
+    }
+    .magazine04_03{
+        width: 100%;
+        height: 300px;
+        order: 1;
+        border-bottom: 1px solid #202023;
+    }
+    .story_logo h3{
+        font-size: 14px;         
+        padding: 30px 0 16px 20px;
+    }
+    .story_logo h1{
+        font-size: 28px;         
+        padding-left: 20px;
+        padding-top: 25px;
+        background: url(../images/logo.png) no-repeat 140px 0px;
+        height: 60px;
+        width: 210px;
+    }    
+    .story_text h3{
+        padding: 30px 20px 0 20px;
+        line-height: 22px;    
+        font-size: 12px;
+    }
+    .story_text h1{
+        font-size: 14px;
+        padding-top: 16px;
+        padding-left: 20px;
+        font-family: "LeferiPoint-SpecialItalicA";
+    }
+    footer{
+        display: none;
+    }
+    .phone{
+        display: block;
+    }
+    .phone_text{
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        padding: 20px 60px;
+        font-family: "LeferiBaseType-RegularA";
+    }
+    .phone_text li a:hover{
+        color: #7a8262;
+    }
+    .phone_wrap{
+        display: flex;
+        padding: 0 60px;
+        justify-content: space-between;
+    }
+    .phone_text2{
+        font-size: 12px;
+        font-family: "LeferiBaseType-RegularA";
+    }
+    .phone_text3{
+        font-size: 12px;
+        font-family: "LeferiBaseType-RegularA";
+    }
+    .big{
+        font-family: "LeferiPoint-BlackA";
+        font-size: 14px;
+    }
+    .phone h3{
+        padding: 10px 0 20px 60px;
+        font-size: 12px;
+        font-family: "LeferiBaseType-RegularA";
+    }
+    #best_review{
+        flex-direction: column;
+        height: 100%;
+    }
+    .review1{
+        border-bottom: 1px solid #202023;
+        width: 100%;
+        height: 500px;
+    }
+    .review2{
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #202023;
+        width: 100%;
+        height: 500px;
+    }
+    .review3{
+        height: 500px;
+        width: 100%;
+    }
+    .review_title h1{
+        font-size: 32px;
+    }
+    .best{
+        padding: 20px 60px; ;
+    }    
+}
+
+@media screen and (max-width: 600px){
+    .new_top h1{
+        font-size: 18px;        
+    }
+    #magazine h1 {
+        font-size: 18px;
+        margin: 40px 0 10px 20px;        
+    }
+    #magazine h4 {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .korea{
+        display: none;
+    }
+    .phone_text {
+        flex-direction: column;
+    }
+    .brand_logo a {       
+        padding: 10px 0 0 20px;
+    }
+    .navbar_why {
+        padding: 12px 0 10px 20px;       
+    }
+    .tab {       
+        padding: 0px 20px;        
+    }
+    .promotion {
+        font-size: 14px;
+    }
+    .tabnav li a {
+        font-size: 12px;
+    }
+    #newarrival_bar {     
+        padding: 0 20px;        
+    }
+    #newarrival_bar h3 {
+        font-size: 14px;
+    }
+    #newarrival_bar h4 {        
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 375px){
+    .new_text {
+        width: 100%;
+        height: 400px;
+    }
+    .new_top h6 {
+        padding: 30px 0 10px 20px;
+    }
+    .new_top h1 {        
+        padding: 0 0 20px 20px;
+    }
+    .new_top h3 {        
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+    .new_top h4 a {    
+        margin-left: 20px;        
+    }
+    .review_title h1 {
+        padding-left: 20px;
+    }
+    .best {
+        padding: 20px 20px;
+    }
+    .story_logo h1 {       
+        background: 0;        
+    }
+    #brand_story {
+        height: 350px;
+    }
+    .story_logo h3 {
+        font-size: 14px;
+        padding: 30px 20px 16px 20px;
+    }
+    .phone_wrap {
+        flex-direction: column;
+    }  
+    .phone_text3{
+        margin-top: 20px;
+    }      
+    .thumb li img {
+        height: 100%;
+        display: block;
+        margin-left: -10px;
+    }   
+    
+}
